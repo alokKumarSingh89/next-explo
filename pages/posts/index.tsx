@@ -1,13 +1,13 @@
 import React from 'react'
 import { Post } from 'components'
-import { IPost } from '../@types'
+import { IPost } from '@types'
 interface IProps {
   data: IPost[]
 }
 const Posts: React.FC<IProps> = ({ data }) => {
   console.log(data)
   return (
-    <div className="mx-auto mt-10 w-2/3">
+    <div className="mx-auto mt-10 w-2/3 flex flex-wrap gap-1">
       {data.map((item) => (
         <Post {...item} key={item.id} />
       ))}
