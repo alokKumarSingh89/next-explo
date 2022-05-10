@@ -5,9 +5,8 @@ interface IProps {
   data: IPost[]
 }
 const Posts: React.FC<IProps> = ({ data }) => {
-  console.log(data)
   return (
-    <div className="mx-auto mt-10 w-2/3 flex flex-wrap gap-1">
+    <div className="mx-auto mt-10 flex w-2/3 flex-wrap gap-1">
       {data.map((item) => (
         <Post {...item} key={item.id} />
       ))}
